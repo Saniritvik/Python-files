@@ -1,4 +1,5 @@
-
+import random
+import time
 ## tic tac toe grid 
 grid2={
     1:"#",
@@ -23,6 +24,8 @@ def currentGrid():
 def fillGrid(): 
     turn="x"
     ##Setting round to 0
+    init()
+    currentGrid()
     counter=0
     for i in range(1,10):
         filled=True
@@ -32,6 +35,67 @@ def fillGrid():
                 print("Another player has put their x/o there already! Try again")
             else:
                 filled=False
+        
+        
+        grid2[xturn] = turn
+        currentGrid()
+        ## Adding 1 to counter to count for a round
+        counter=counter + 1
+        ## Checking if its round 5
+        if counter >= 5:
+            gameOver=gameEnd(turn)
+            if gameOver:
+                break
+        if counter == 9:
+            print("THE GAME IS A TIE NO ONE WINS")
+            break
+        init()
+        if turn=="x":
+            turn="o"
+        else:
+            turn="x"
+
+def gamemode():
+    question=input("Would you like to play 2 players or fight against a pc? (pc/pvp)")
+    if question=="pc":
+        fillGridPc()
+    else: 
+        fillGrid()
+
+
+
+
+
+
+filledSpot=[]
+
+def randomNum():
+    print(filledSpot)
+    andomNum=random.randint(1,9)
+    if andomNum not in filledSpot:
+        return random.randint(1,9)
+    else:
+        randomNum()
+
+def fillGridPc(): 
+    turn="x"
+    ##Setting round to 0
+    init()
+    currentGrid()
+    counter=0
+    for i in range(1,10):
+        filled=True
+        while filled:
+            if turn=="x":
+                xturn=int(input("Player " + turn + " where would you like to pick? (1-9)"))
+            else:
+                xturn=randomNum()
+            if grid2[xturn] == "o" or grid2[xturn] == "x":
+                print("Another player has put their x/o there already! Try again")
+            else:
+                filledSpot.append(xturn)
+                filled=False
+                time.sleep(1)
         
         
         grid2[xturn] = turn
@@ -87,6 +151,5 @@ def init():
     print("4|5|6")
     print("7|8|9")
 
-init()
-currentGrid()
-fillGrid()
+
+gamemode()
