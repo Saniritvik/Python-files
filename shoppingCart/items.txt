@@ -1,0 +1,9 @@
+Bananas|| 0.69
+Apples||0.99
+Cucumbers||0.89
+Oranges||1.19
+Watermelons||0.59
+Mangoes||1.25
+Onions||0.65
+Potatoes||0.55
+Bananas||9999.0
