@@ -7,3 +7,4 @@ Mangoes||1.25
 Onions||0.65
 Potatoes||0.55
 Bananas||9999.0
+hihih||0.9
