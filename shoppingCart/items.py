@@ -35,11 +35,10 @@ def viewItems():
         totalItems.append(lines.split("||")[0])
         itemsPrice.append(lines.split("||")[1])
         index += 1
-    return index,totalItems,itemsPrice
-    # print("")
-    # item = int(input("Choose the index to add item to cart"))
-    # print(totalItems[item-1])
-    # print(itemsPrice[item-1])
+    print("")
+    item = int(input("Choose the index to add item to cart"))
+    print(totalItems[item-1])
+    print(itemsPrice[item-1])
 
 
 def addNewItem():

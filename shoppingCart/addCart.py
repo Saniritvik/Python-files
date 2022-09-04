@@ -2,6 +2,7 @@ from operator import delitem
 from items import viewItems
 cart = []
 
+cart=[]
 def addCart():
     totalPrice=0
     index,totalItems,itemsPrice = viewItems()
@@ -14,6 +15,7 @@ def addCart():
             cart.append(Item + "||" + str(quantity) + "||" + str(itemsPrice[cartItem-1]))
         else:
             print("Go back to kindergarden and LEARN NUMBERS")
+
 
 
 def delEntireCart(fileName):
@@ -40,6 +42,7 @@ def viewCart():
         totalPrice += int(item.split("||")[1])*float(item.split("||")[2])
     print("Number of items --" + str(totalOfItems))
     print("Total price equal to:" + str(totalPrice) + " now stop shopping!")
+
 
 
 def deleteItem():
