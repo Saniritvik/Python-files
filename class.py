@@ -24,7 +24,7 @@ class person:
 billyObject= person(11,"Male","Billy bob joe bob")
 dudeObject=person(15,"Female","A human")
 otherObject=person(43,"Male","Sammy")
-uhObject=person(3278,"Male","EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
+uhObject=person(3278,"Male","EEEEEE")
 print(uhObject)
 # print(dudeObject)
 # print(billyObject)

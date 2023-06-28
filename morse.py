@@ -74,4 +74,3 @@ while inf:
         print("Stopping code")
         inf=False
 
-## I can't hear you

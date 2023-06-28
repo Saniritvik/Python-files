@@ -1,5 +1,6 @@
 class Student:
     schoolName="HSI"
+    someList=[]
     def __init__(self,studentName,studentAge):
         self.studentName = studentName
         self.studentAge = studentAge
@@ -18,19 +19,27 @@ class Student:
     @classmethod 
     def changeSchool(cls,newSchoolName):
         Student.schoolName = newSchoolName
+        
+    @classmethod
+    def printStudents(cls):
+        print(Student.someList)
+        
     
     @staticmethod    
     def holidayList():
         print("This is the static method because yes")
     
-Student.holidayList()
+# Student.holidayList()
 studentObject=Student("Bobber is cool and yes",345789)
-print(studentObject)
-studentObject.changeAge(450)
-print(studentObject)
-Student.changeSchool("SUJO")
-print(studentObject)
-studentObject.changeStudentSchool("SDFJK")
-print(studentObject)
+# print(studentObject)
+# studentObject.changeAge(450)
+# print(studentObject)
+# Student.changeSchool("SUJO")
+# print(studentObject)
+# studentObject.changeStudentSchool("SDFJK")
+# print(studentObject)
 studenterObject=Student("Grape",140238)
-print(studenterObject)
+# print(studenterObject)
+someList.append(studentObject)
+someList.append(studenterObject)
+print(someList)
