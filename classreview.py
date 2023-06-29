@@ -237,22 +237,54 @@
         
 # sq=Square()
 
-class D: #Great grand parent
+# class D: #Great grand parent
+#     pass
+
+# class A(D): #Grand parent
+#     def __init__(self) -> None:
+#         print("Class A")
+
+# class B(A): #Parent
+#     def __init__(self) -> None:
+#         print("Class B")
+
+# class C(B): #Child
+#     pass
+
+# print(C.__mro__)
+
+# class Q:
+#     pass
+# print(Q.__mro__)
+
+# class Animal:
+#     def __init__(self) -> None:
+#         print("Animal")
+
+# class Reptile(Animal):
+#     def __init__(self) -> None:
+#         super().__init__()
+#         print("Reptile")
+        
+#     def animalPrinting(self,n):
+#         print("Reptile ",n)
+
+# class Crocodile(Reptile):
+#     def __init__(self,n) -> None:
+#         super().__init__()
+#         super().animalPrinting(n)
+#         print("Crocodile")
+
+# croc=Crocodile(5)
+
+class A: 
     pass
 
-class A(D): #Grand parent
-    def __init__(self) -> None:
-        print("Class A")
+class B(A):
+    pass
 
-class B(A): #Parent
-    def __init__(self) -> None:
-        print("Class B")
-
-class C(B): #Child
+class C(A): 
     pass
 
 print(C.__mro__)
-
-class Q:
-    pass
-print(Q.__mro__)
+print(B.__mro__)
