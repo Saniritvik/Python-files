@@ -187,23 +187,72 @@
 
 # b=B()
 
-class A: 
-    def __init__(self) -> None:
-        self.x=1
-        self.__y=2
-        print("Parent constructer called")
+# class A: 
+#     def __init__(self) -> None:
+#         self.x=1
+#         self.__y=2
+#         print("Parent constructer called")
         
-    def display(self):
-        print("Y is",self.__y)
-        print("Parent display called")
+#     def display(self):
+#         print("Y is",self.__y)
+#         print("Parent display called")
     
-    def updatey(self,y):
-        self.__y=y
-        print("Parent cupdatey called")
+#     def updatey(self,y):
+#         self.__y=y
+#         print("Parent cupdatey called")
 
-class B(A): 
+# class B(A): 
+#     def __init__(self) -> None:
+#         A()
+#         print("Child constructer called")
+
+# b=B()
+
+# class A(object):
+#     def __init__(self) -> None:
+#         print("Parent")
+        
+#     def display(self):
+#         print("Inside class A")
+# class B(A):
+#     def __init__(self) -> None:
+#         print("Child")
+        
+#     def display(self):
+#         super().display()
+#         print("Inside class B")
+        
+# b=B()
+# b.display()
+
+
+# class Shape: 
+#     def display(self,side):
+#         print("The area is " + str(side * side))
+        
+# class Square(Shape): 
+#     def __init__(self) -> None:
+#         self.side = int(input("Give me a number"))
+#         super().display(self.side)
+        
+# sq=Square()
+
+class D: #Great grand parent
+    pass
+
+class A(D): #Grand parent
     def __init__(self) -> None:
-        A()
-        print("Child constructer called")
+        print("Class A")
 
-b=B()
+class B(A): #Parent
+    def __init__(self) -> None:
+        print("Class B")
+
+class C(B): #Child
+    pass
+
+print(C.__mro__)
+
+class Q:
+    pass
+print(Q.__mro__)
