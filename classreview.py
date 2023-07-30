@@ -277,14 +277,39 @@
 
 # croc=Crocodile(5)
 
-class A: 
-    pass
+# class A: 
+#     pass
 
-class B(A):
-    pass
+# class B(A):
+#     pass
 
-class C(A): 
-    pass
+# class C(A): 
+#     pass
 
-print(C.__mro__)
-print(B.__mro__)
+# print(C.__mro__)
+# print(B.__mro__)
+
+from abc import ABC,abstractclassmethod
+class Shape(ABC): 
+    @abstractclassmethod
+    def area(self): 
+        pass
+
+class Square(Shape): 
+    def area(self,a): 
+        print(a * a)
+        
+class Rectangle(Shape): 
+    def area(self,b,l): 
+        print(b * l)
+        
+class Triange(Shape):
+    def area(self,b,h):
+        print(b * h // 2)
+        
+s= Square()
+r=Rectangle()
+t=Triange()
+s.area(5)
+r.area(5,2)
+t.area(20,2)
