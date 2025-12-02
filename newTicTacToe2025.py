@@ -25,4 +25,7 @@ def tic_tac_toe():
         print(grid_dict[1] + "|" + grid_dict[2] + "|" + grid_dict[3])
         print(grid_dict[4] + "|" + grid_dict[5] + "|" + grid_dict[6])
         print(grid_dict[7] + "|" + grid_dict[8] + "|" + grid_dict[9])
-       
+        
+        
+
+tic_tac_toe()
