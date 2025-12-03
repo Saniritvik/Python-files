@@ -22,7 +22,7 @@ def decrpytWord(cypherText):
         answer.append(morseDecrypt[i])
     return ''.join(answer)
 
-## Makes more code sentance into normal english
+## Makes morse code sentance into normal english
 def decrpytSentance(encryptedSentance):
     encryptedSentance=encryptedSentance + " "
     decrytedWord=[]
