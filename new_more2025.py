@@ -43,10 +43,12 @@ while True:
     if user.upper() == "E": 
         word = input("What word or phrase do you want to encrypt? ")
         output = start(word, True, ENG_TO_MORSE)
+        print(output)
     
     if user.upper() == "D": 
         decrypt = input("What word or phrase do you want to decrypt? ")
-        output = start(word, False, MORSE_TO_ENG)
+        output = start(decrypt, False, MORSE_TO_ENG)
+        print(output)
 
     if user == "1": 
         print("Thank you for using this program!")
