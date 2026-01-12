@@ -51,5 +51,5 @@ while True:
         print(output)
 
     if user == "1": 
-        print("Thank you for using this program!")
+        print("\nThank you for using this program!")
         break
